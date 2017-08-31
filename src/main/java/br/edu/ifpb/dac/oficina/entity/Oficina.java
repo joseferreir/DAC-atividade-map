@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 /**
@@ -31,6 +32,7 @@ public class Oficina implements Serializable {
     private Endereco localizacao;
     private double saldo;
     @OneToMany
+    @JoinColumn(name = "oficina_id")
     private List<Funcionario> funcinarios;
 
     public Oficina() {
