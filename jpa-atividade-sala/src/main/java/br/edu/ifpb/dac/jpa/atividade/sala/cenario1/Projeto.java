@@ -21,5 +21,16 @@ public class Projeto implements Serializable{
     private String area;
     private LocalDate dataInicio;
     private LocalDate dataConclusao;
+    @ManyToMany
     private List<Funcionario> funcionarios;
+
+    public Projeto( String desccricao, String area, LocalDate dataInicio, LocalDate dataConclusao, List<Funcionario> funcionarios) {
+        this.id = id;
+        this.desccricao = desccricao;
+        this.area = area;
+        this.dataInicio = dataInicio;
+        this.dataConclusao = dataConclusao;
+        this.funcionarios = funcionarios;
+    }
+    
 }

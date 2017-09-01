@@ -54,7 +54,7 @@ public class Main {
         dao.save(conserto);
         dao.save(conserto2);
         daoOf.save(oficina);
-//        dao.remove(3);
+        dao.remove(3);
 
     }
 
